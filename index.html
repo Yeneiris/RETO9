@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Tienda de Café</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f5f5f5; }
+
+header {
+    background: #1e1e1e;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a { color: white; margin: 0 15px; text-decoration: none; }
+
+.hero {
+    text-align: center;
+    padding: 60px;
+    background: linear-gradient(to right, #3e2723, #795548);
+    color: white;
+}
+
+.productos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    width: 250px;
+    text-align: center;
+}
+
+.card img { width: 100%; }
+
+.btn {
+    background: #ff9800;
+    border: none;
+    padding: 10px;
+    color: white;
+    width: 100%;
+}
+
+footer {
+    background: #1e1e1e;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h2>Tienda Café ☕</h2>
+<nav>
+<a href="index.html">Inicio</a>
+<a href="acercade.html">Acerca de</a>
+<a href="productos.html">Productos</a>
+<a href="contacto.html">Contacto</a>
+<a href="compras.html">Compras</a>
+</nav>
+</header>
+
+<section class="hero">
+<h1>El mejor café de Colombia</h1>
+<p>Calidad premium directo a tu hogar</p>
+<img src="https://cdn.pixabay.com/photo/2017/09/04/18/39/coffee-2714970_1280.jpg" width="150">
+</section>
+
+<section class="productos">
+
+<div class="card">
+<img src="https://cdn.pixabay.com/photo/2016/11/29/12/54/coffee-1869656_1280.jpg">
+<h3>Café Premium</h3>
+<p>$20.000</p>
+<button class="btn" onclick="agregarAlCarrito('Café Premium', 20000)">Agregar</button>
+</div>
+
+<div class="card">
+<img src="https://cdn.pixabay.com/photo/2015/05/07/13/46/cappuccino-756490_1280.jpg">
+<h3>Café Orgánico</h3>
+<p>$18.000</p>
+<button class="btn" onclick="agregarAlCarrito('Café Orgánico', 20000)">Agregar</button>
+</div>
+
+<div class="card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq-eZt7WrwKHQa1KUiRcNU-x96IH0hx9gtaQ&s">
+<h3>Café Especial</h3>
+<p>$25.000</p>
+<button class="btn" onclick="agregarAlCarrito('Café Especial', 20000)">Agregar</button>
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 Tienda de Café</p>
+</footer>
+
+</body>
+</html>

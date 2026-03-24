@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cafetería - Compras</title>
+
+
+<style>
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ece9e6, #ffffff);
+    margin: 0;
+}
+
+header {
+    background: #2e1f1c;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav a {
+    color: #ffccbc;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+.productos {
+    flex: 1;
+    min-width: 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+
+.carrito {
+    flex: 1;
+    min-width: 300px;
+    background: #fff8f5;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    border: 2px solid #f3e5dc;
+}
+
+
+#listaCarrito li {
+    list-style: none;
+    background: white;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+
+button {
+    background: #6d4c41;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: #4e342e;
+}
+
+
+.eliminar {
+    background: #e53935;
+}
+
+.eliminar:hover {
+    background: #b71c1c;
+}
+
+
+#total {
+    background: #3e2723;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+.card {
+    border: none;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background: #fafafa;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.08);
+}
+
+
+select {
+    padding: 6px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+button:last-child {
+    background: #2e7d32;
+}
+
+button:last-child:hover {
+    background: #1b5e20;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<header>
+    <h2>☕ Cafetería</h2>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="acercade.html">Acerca de</a>
+        <a href="productos.html">Productos</a>
+        <a href="compras.html">Compras</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <p>👀 Visitas: <span id="visitas"></span></p>
+    <p>🛒 Productos en carrito: <span id="contadorCarrito"></span></p>
+</header>
+
+<div class="container">
+
+
+    <section class="productos">
+        <h3>Menú</h3>
+
+        <select id="filtro" onchange="filtrarProductos()">
+            <option value="todos">Todos</option>
+            <option value="bebida">Bebidas</option>
+            <option value="comida">Comida</option>
+        </select>
+
+        <div id="listaProductos"></div>
+    </section>
+
+  
+    <section class="carrito">
+        <h3>Carrito de Compras</h3>
+        <ul id="listaCarrito"></ul>
+        <h4 id="total"></h4>
+        <button onclick="vaciarCarrito()">Vaciar carrito</button>
+        <button onclick="comprar()">Comprar</button>
+    </section>
+
+</div>
+
+<script src="carrito.js"></script>
+
+</body>
+</html>
+
